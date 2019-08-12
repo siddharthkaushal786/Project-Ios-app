@@ -1,0 +1,6 @@
+framework module Pods_MVCJSONParsing {
+  umbrella header "Pods-MVCJSONParsing-umbrella.h"
+
+  export *
+  module * { export * }
+}
