@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Messageapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-sw-lWM">
+                                <rect key="frame" x="100" y="429" width="214" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Message"/>
+                                <connections>
+                                    <action selector="btnSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJV-p8-cua"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-69-sL8">
+                                <rect key="frame" x="20" y="69" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NO8-Qj-x3c">
+                                <rect key="frame" x="50" y="184" width="327" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aI6-lb-QgS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tx-HQ-ERw">
+                                <rect key="frame" x="100" y="518" width="214" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Email"/>
+                                <connections>
+                                    <action selector="btnSendEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNb-4s-TvF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tx-HQ-ERw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="3TA-fy-Vkf"/>
+                            <constraint firstItem="NO8-Qj-x3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="CGo-QG-Ksf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ig-sw-lWM" secondAttribute="trailing" constant="100" id="EJE-Fs-sch"/>
+                            <constraint firstItem="pmL-69-sL8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="J9o-c3-uvw"/>
+                            <constraint firstItem="pmL-69-sL8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jtq-vt-cYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Tx-HQ-ERw" secondAttribute="trailing" constant="100" id="SyO-pc-rkb"/>
+                            <constraint firstItem="6Tx-HQ-ERw" firstAttribute="top" secondItem="2ig-sw-lWM" secondAttribute="bottom" constant="50" id="U4U-B0-gbp"/>
+                            <constraint firstItem="NO8-Qj-x3c" firstAttribute="top" secondItem="pmL-69-sL8" secondAttribute="bottom" constant="85" id="abD-PD-yqN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NO8-Qj-x3c" secondAttribute="trailing" constant="37" id="bmf-OG-3Xo"/>
+                            <constraint firstItem="2ig-sw-lWM" firstAttribute="top" secondItem="NO8-Qj-x3c" secondAttribute="bottom" constant="95" id="h8v-bX-4SO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pmL-69-sL8" secondAttribute="trailing" constant="20" id="kQY-F9-ufL"/>
+                            <constraint firstItem="2ig-sw-lWM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="y2B-c4-Gyb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtSubject" destination="pmL-69-sL8" id="dHv-Mi-U0u"/>
+                        <outlet property="txtviewBody" destination="NO8-Qj-x3c" id="lE5-dp-fJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="35"/>
+        </scene>
+    </scenes>
+</document>

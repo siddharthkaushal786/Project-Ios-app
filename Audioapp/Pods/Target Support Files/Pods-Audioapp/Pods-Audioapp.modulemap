@@ -1,0 +1,6 @@
+framework module Pods_Audioapp {
+  umbrella header "Pods-Audioapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

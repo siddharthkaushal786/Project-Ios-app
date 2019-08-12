@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Frameworkapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dpg-l7-nLL"/>
+                        <viewControllerLayoutGuide type="bottom" id="s2D-bQ-8gN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVb-4H-9Wi">
+                                <rect key="frame" x="172" y="74" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-8g-PEZ">
+                                <rect key="frame" x="332" y="104" width="22" height="22"/>
+                                <connections>
+                                    <action selector="btnAddContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekc-5D-Lku"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-YG-CYS">
+                                <rect key="frame" x="35" y="104" width="42" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uVb-4H-9Wi" firstAttribute="top" secondItem="dpg-l7-nLL" secondAttribute="bottom" constant="30" id="0pm-HE-hLS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEZ-8g-PEZ" secondAttribute="trailing" constant="40" id="2Ee-pb-5kn"/>
+                            <constraint firstItem="uVb-4H-9Wi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HVc-DE-cis"/>
+                            <constraint firstItem="ecc-YG-CYS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Jqs-eS-BP8"/>
+                            <constraint firstItem="ecc-YG-CYS" firstAttribute="top" secondItem="dpg-l7-nLL" secondAttribute="bottom" constant="60" id="UVr-Pi-Ltb"/>
+                            <constraint firstItem="dEZ-8g-PEZ" firstAttribute="top" secondItem="dpg-l7-nLL" secondAttribute="bottom" constant="60" id="uF3-X0-e3n"/>
+                            <constraint firstItem="ecc-YG-CYS" firstAttribute="centerY" secondItem="dEZ-8g-PEZ" secondAttribute="centerY" id="yxn-rb-zNM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblContact" destination="ecc-YG-CYS" id="csM-A5-Fno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="-384"/>
+        </scene>
+    </scenes>
+</document>
