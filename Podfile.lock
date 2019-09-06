@@ -1,16 +1,24 @@
 PODS:
-  - SideMenu (6.0.9)
+  - Alamofire (4.8.2)
+  - GooglePlacesSearchController (0.2.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - SideMenu
+  - Alamofire
+  - GooglePlacesSearchController
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SideMenu
+    - Alamofire
+    - GooglePlacesSearchController
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  SideMenu: 12c42f4bb9405c602f0d75493206cd405911a153
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  GooglePlacesSearchController: e53b61b7497cf40cb18ec296b1d3314c11c0a1c0
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e495667093b80b386967103656a0b4e936c3b8f4
+PODFILE CHECKSUM: a6b7318b50e06a401f095117c2174bdd7db017b4
 
 COCOAPODS: 1.7.5

@@ -1,0 +1,6 @@
+framework module Pods_GoogleApi {
+  umbrella header "Pods-GoogleApi-umbrella.h"
+
+  export *
+  module * { export * }
+}
