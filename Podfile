@@ -1,14 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'GoogleApi' do
+target 'FacebookIntegration' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
-pod 'GooglePlacesSearchController'
-
-pod 'GooglePlaces'
-
+  # Pods for FacebookIntegration
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 end
