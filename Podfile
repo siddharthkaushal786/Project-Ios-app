@@ -1,11 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'MenuApp' do
+target 'SideMenu' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for MenuApp
+  # Pods for SideMenu
 pod 'SideMenu'
-
 end

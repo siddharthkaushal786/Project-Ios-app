@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UVL-6b-2qd">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ssg-kw-cT2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="74" id="iTh-4J-d33" customClass="MyTableViewCell" customModule="SideMenu">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iTh-4J-d33" id="kRU-NB-Xro">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-xd-DQT">
+                                                    <rect key="frame" x="354" y="24.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="XgI-27-dLn"/>
+                                                        <constraint firstAttribute="height" constant="25" id="cvT-Rw-QTL"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="btnSideMenu:" destination="iTh-4J-d33" eventType="touchUpInside" id="mSs-SR-la3"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T63-EN-jDg">
+                                                    <rect key="frame" x="22" y="24.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="1rb-XR-WYh"/>
+                                                        <constraint firstAttribute="height" constant="25" id="6o6-Qo-eeF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-4t-FW4">
+                                                    <rect key="frame" x="62" y="26.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dCI-xd-DQT" secondAttribute="trailing" constant="15" id="7AI-t9-neQ"/>
+                                                <constraint firstItem="f4e-4t-FW4" firstAttribute="centerY" secondItem="T63-EN-jDg" secondAttribute="centerY" id="7ig-iM-Uk5"/>
+                                                <constraint firstItem="dCI-xd-DQT" firstAttribute="centerY" secondItem="f4e-4t-FW4" secondAttribute="centerY" id="8yr-Uj-ZvR"/>
+                                                <constraint firstItem="T63-EN-jDg" firstAttribute="centerY" secondItem="kRU-NB-Xro" secondAttribute="centerY" id="EyY-uh-aSO"/>
+                                                <constraint firstItem="f4e-4t-FW4" firstAttribute="leading" secondItem="T63-EN-jDg" secondAttribute="trailing" constant="15" id="XDd-rc-00U"/>
+                                                <constraint firstItem="T63-EN-jDg" firstAttribute="leading" secondItem="kRU-NB-Xro" secondAttribute="leadingMargin" constant="2" id="gAz-kh-NYI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnSide" destination="dCI-xd-DQT" id="jDN-nY-wFa"/>
+                                            <outlet property="imgSideMenu" destination="T63-EN-jDg" id="Vh3-EU-Bp3"/>
+                                            <outlet property="lblSideMenu" destination="f4e-4t-FW4" id="Tr2-ZC-dBC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ai9-7F-X1v"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nKz-Rg-0SS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssg-kw-cT2" secondAttribute="trailing" id="GJz-nB-gSb"/>
+                            <constraint firstItem="ssg-kw-cT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P6y-1H-K3B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ssg-kw-cT2" secondAttribute="bottom" id="cWS-AU-RmQ"/>
+                            <constraint firstItem="ssg-kw-cT2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ugR-Az-15t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U1n-2e-DEc"/>
+                    <connections>
+                        <outlet property="sidemenuTableView" destination="ssg-kw-cT2" id="ntY-gS-Uz6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="-483"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="rdD-TB-gLq">
+            <objects>
+                <viewController id="UVL-6b-2qd" customClass="SideMenuViewController" customModule="SideMenu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ro-LP-63C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-tT-C56">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EB1-cD-hEr">
+                                        <rect key="frame" x="14" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IMK-KY-iLV"/>
+                                            <constraint firstAttribute="width" constant="30" id="lyH-wL-GWH"/>
+                                        </constraints>
+                                        <state key="normal" image="icons8-menu-64"/>
+                                        <connections>
+                                            <action selector="btnSideMenu:" destination="UVL-6b-2qd" eventType="touchUpInside" id="1TC-aR-278"/>
+                                            <segue destination="ucL-Cg-Wrh" kind="show" id="Fva-3v-TII"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59607843140000005" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EB1-cD-hEr" firstAttribute="centerY" secondItem="rxM-tT-C56" secondAttribute="centerY" id="dtf-aj-DeP"/>
+                                    <constraint firstAttribute="height" constant="40" id="sSo-yR-Ryp"/>
+                                    <constraint firstItem="EB1-cD-hEr" firstAttribute="leading" secondItem="rxM-tT-C56" secondAttribute="leading" constant="14" id="ylO-Gj-hpS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rxM-tT-C56" firstAttribute="top" secondItem="A44-Nv-yep" secondAttribute="top" id="BO4-g3-j6G"/>
+                            <constraint firstItem="rxM-tT-C56" firstAttribute="leading" secondItem="A44-Nv-yep" secondAttribute="leading" id="DN4-dj-iLs"/>
+                            <constraint firstItem="A44-Nv-yep" firstAttribute="trailing" secondItem="rxM-tT-C56" secondAttribute="trailing" id="rM2-ad-JEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A44-Nv-yep"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnsideMenu" destination="EB1-cD-hEr" id="j3y-cV-sKJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jn6-Ww-5cP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="-529"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="jEO-qW-5b2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ucL-Cg-Wrh" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sEf-vm-laz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysAnimate" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableSwipeGestures" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mI2-kF-oVt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAb-eL-UDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-menu-64" width="64" height="64"/>
+    </resources>
+</document>
