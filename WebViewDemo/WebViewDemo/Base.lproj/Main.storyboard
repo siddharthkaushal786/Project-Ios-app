@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5tp-Bo-cq9">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-yC-8A4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cfZ-zW-6a2"/>
+                                </connections>
+                            </searchBar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-0h-OpO">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CT4-sr-tQQ">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L1I-yC-8A4" secondAttribute="trailing" id="0NP-5j-63E"/>
+                            <constraint firstItem="dRZ-0h-OpO" firstAttribute="top" secondItem="L1I-yC-8A4" secondAttribute="bottom" id="30P-oP-ao5"/>
+                            <constraint firstItem="L1I-yC-8A4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3cI-xV-Ou9"/>
+                            <constraint firstItem="L1I-yC-8A4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IoN-Sv-mtg"/>
+                            <constraint firstItem="CT4-sr-tQQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JEs-6D-g1y"/>
+                            <constraint firstItem="dRZ-0h-OpO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P1I-JL-A6m"/>
+                            <constraint firstItem="dRZ-0h-OpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U4F-VY-jcX"/>
+                            <constraint firstItem="CT4-sr-tQQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y86-Dk-Z9I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dRZ-0h-OpO" secondAttribute="bottom" id="gbK-ZW-yoi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="rewind" id="xCx-iN-Mzy">
+                            <connections>
+                                <action selector="btnBack:" destination="BYZ-38-t0r" id="z8x-SX-MF8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="fastForward" id="mm8-lk-925">
+                            <connections>
+                                <action selector="btnForward:" destination="BYZ-38-t0r" id="pzC-DT-oo0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2bW-IS-6Kr"/>
+                        <barButtonItem systemItem="refresh" id="sxJ-Xp-vdS">
+                            <connections>
+                                <action selector="btnRefresh:" destination="BYZ-38-t0r" id="NC0-4X-1v3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="stop" id="VE2-7h-04a">
+                            <connections>
+                                <action selector="btnStop:" destination="BYZ-38-t0r" id="Gg0-qi-q6y"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="Cq0-YD-JUv"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actIndView" destination="CT4-sr-tQQ" id="Zft-qL-8cY"/>
+                        <outlet property="webView" destination="dRZ-0h-OpO" id="G2M-wG-owG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gae-RX-a1Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="5tp-Bo-cq9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gqe-T5-rlf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="3Z6-FI-iJE">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qEB-BO-ICL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waB-xd-0a0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
